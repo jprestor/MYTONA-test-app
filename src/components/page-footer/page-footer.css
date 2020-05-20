@@ -1,0 +1,11 @@
+.copyrights {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.copyrights p {
+  margin: 0;
+}
