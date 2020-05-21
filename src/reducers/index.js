@@ -1,8 +1,10 @@
-const reducer = (state = {}, action) => {
+import updateNews from './updateNews';
+import updateLogin from './updateLogin';
 
-
+const reducer = (state, action) => {
   return {
-    ...state
+    news: updateNews(state, action),
+    login: updateLogin(state, action)
   }
 }
 

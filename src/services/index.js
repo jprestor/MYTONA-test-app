@@ -1,5 +1,7 @@
-import NewsService from './news-service';
 import { NewsServiceContext, NewsServiceProvider } from './context';
 
+import NewsService from './news-service';
+import LoginService from './login-service';
 
-export { NewsService, NewsServiceContext, NewsServiceProvider }
+
+export { NewsServiceContext, NewsServiceProvider, NewsService, LoginService }

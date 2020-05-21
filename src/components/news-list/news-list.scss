@@ -1,0 +1,11 @@
+.news-list__layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px 10px;
+}
+
+.news-list__item {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 15px 30px;
+}

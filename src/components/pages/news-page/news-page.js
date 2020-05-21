@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import NewsList from '../../news-list';
 
 const NewsPage = () => {
   return (
-    <h1>News Page</h1>
+    <Fragment>
+      <h1>News Page</h1>
+      <NewsList isMainPage={false} />
+    </Fragment>
   )
 };
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './page-header.scss';
+
 const PageHeader = () => {
   return (
-    <header className="page-header  navbar-dark  bg-light">
+    <header className="page-header  navbar-dark  bg-dark">
       <div className="container">
         <ul className="nav">
           <li className="nav-item">
@@ -16,11 +18,11 @@ const PageHeader = () => {
               Новости
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item  ml-auto">
             <Link className="nav-link" to="/login/">
               Войти
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </header>

@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+import PrivateRoute from '../private-route';
 import PageHeader from '../page-header';
 import PageFooter from '../page-footer';
-import { MainPage, NewsPage, LoginPage } from '../pages';
+import { MainPage, NewsPage, NewsItemPage, LoginPage } from '../pages';
+import './app.scss';
 
 const App = () => {
   return (
@@ -12,8 +14,9 @@ const App = () => {
 
       <main className="page-main  container">
         <Switch>
-          <Route path="/" component={MainPage} exact />
-          <Route path="/news/" component={NewsPage} />
+          <PrivateRoute path="/" component={MainPage} exact />
+          <PrivateRoute path="/news/" component={NewsPage} exact />
+          <PrivateRoute path="/news/:id" component={NewsItemPage} />
           <Route path="/login/" component={LoginPage} />
           <Route render={() => <h2>Page not found</h2>} />
         </Switch>

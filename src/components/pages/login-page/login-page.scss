@@ -1,0 +1,24 @@
+.home-page-title {
+  margin: 15px 0 60px;
+  font-size: 3rem;
+}
+
+.home-page-subheading .list-group-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* form */
+form {
+  label {
+    margin-right: 8px;
+  }
+  input {
+    padding: 2px 5px;
+  }
+  input[type='submit'] {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+}

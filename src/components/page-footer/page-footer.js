@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './page-footer.scss'
+
 const PageFooter = () => {
   return (
     <footer className="page-footer  bg-dark">

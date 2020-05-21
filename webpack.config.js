@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env = {}) => {
   const { mode = 'development' } = env;
@@ -20,6 +21,11 @@ module.exports = (env = {}) => {
         title: 'MusicCart',
         template: 'public/index.html',
       }),
+      new CopyPlugin({
+        patterns: [
+          { from: 'public/data.json', to: './assets/data/' },
+        ],
+      })
     ];
 
     if (isProd) {
@@ -68,7 +74,7 @@ module.exports = (env = {}) => {
             {
               loader: 'file-loader',
               options: {
-                outputPath: 'images',
+                outputPath: 'assets/images',
                 name: '[name]-[sha1:hash:7].[ext]',
               },
             },
@@ -82,7 +88,7 @@ module.exports = (env = {}) => {
             {
               loader: 'file-loader',
               options: {
-                outputPath: 'fonts',
+                outputPath: 'assets/fonts',
                 name: '[name].[ext]',
               },
             },
