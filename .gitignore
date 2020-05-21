@@ -2,5 +2,6 @@
 build/
 dist/
 .prettierrc.json
+yarn-error.log
 snippets.json
 *.code-workspace
