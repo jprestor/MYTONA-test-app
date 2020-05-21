@@ -1,0 +1,4 @@
+.copyrights{display:flex;align-items:center;height:40px;color:#fff;font-weight:500}.copyrights p{margin:0}
+
+html,body,#root{height:100%}#root{display:flex;flex-direction:column}.page-main{padding-top:40px;flex-grow:1}h1,h2,h3,h4{font-weight:300}h1{font-weight:300;font-size:3rem}h1.main-page-title{font-size:3.5rem}
+
