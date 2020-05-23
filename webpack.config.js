@@ -11,7 +11,12 @@ module.exports = (env = {}) => {
   const getStyleLoaders = () => {
     return [
       isProd ? MiniCssExtractPlugin.loader : 'style-loader',
-      'css-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
+        },
+      },
     ];
   };
 
@@ -22,10 +27,8 @@ module.exports = (env = {}) => {
         template: 'public/index.html',
       }),
       new CopyPlugin({
-        patterns: [
-          { from: 'public/data.json', to: './assets/data/' },
-        ],
-      })
+        patterns: [{ from: 'public/data.json', to: './assets/data/' }],
+      }),
     ];
 
     if (isProd) {
@@ -58,7 +61,16 @@ module.exports = (env = {}) => {
         // Loading SASS
         {
           test: /\.(s[ca]ss)$/,
-          use: [...getStyleLoaders(), 'sass-loader'],
+          use: [
+            ...getStyleLoaders(),
+            {
+              loader: 'sass-loader',
+              options: {
+                // To enable CSS source maps, you'll need to pass the sourceMap option to the sass-loader and the css-loader
+                sourceMap: true,
+              },
+            },
+          ],
         },
 
         // Loading CSS
@@ -102,5 +114,7 @@ module.exports = (env = {}) => {
     devServer: {
       open: true, // автоматически открывает браузер
     },
+
+    devtool: 'eval-cheap-source-map',
   };
 };

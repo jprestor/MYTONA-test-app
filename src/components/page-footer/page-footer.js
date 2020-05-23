@@ -1,8 +1,10 @@
 import React from 'react';
 
-import './page-footer.scss'
+import './page-footer.scss';
 
 const PageFooter = () => {
+  console.log('footer');
+
   return (
     <footer className="page-footer  bg-dark">
       <div className="container">
