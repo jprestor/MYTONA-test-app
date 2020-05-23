@@ -46,6 +46,7 @@ const NewsList = ({ items, isMainPage }) => {
 
       {!isMainPage && (
         <NewsListPaginaton
+          items={items}
           curPage={curPage}
           postsPerPage={postsPerPage}
           onPageChange={setCurPage}

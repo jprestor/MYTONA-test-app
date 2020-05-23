@@ -15,7 +15,7 @@ const App = () => {
       <main className="page-main  container">
         <Switch>
           <PrivateRoute path="/" component={MainPage} exact />
-          <PrivateRoute path="/news/" component={NewsPage} exact />
+          <Route path="/news/" component={NewsPage} exact />
           <PrivateRoute path="/news/:id" component={NewsItemPage} />
           <Route path="/login/" component={LoginPage} />
           <Route render={() => <h2>Page not found</h2>} />

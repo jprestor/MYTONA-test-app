@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 import './news-list-pagination.scss';
 
@@ -26,10 +25,4 @@ const NewsListPaginaton = ({ items, curPage, postsPerPage, onPageChange }) => {
   return <ul className="news-list__pagination">{elements}</ul>;
 };
 
-const mapStateToProps = ({ news: { items } }) => {
-  return {
-    items,
-  };
-};
-
-export default connect(mapStateToProps)(NewsListPaginaton);
+export default NewsListPaginaton;

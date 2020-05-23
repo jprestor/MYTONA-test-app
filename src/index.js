@@ -7,16 +7,19 @@ import { NewsService, NewsServiceProvider } from './services';
 import store from './store.js';
 
 import App from './components/app';
+import ErrorBoundary from './components/error-boundary';
 
 const newsService = new NewsService();
 
 ReactDom.render(
   <Provider store={store}>
-    <NewsServiceProvider value={newsService}>
-      <Router basename="/">
-        <App />
-      </Router>
-    </NewsServiceProvider>
-  </Provider >,
+    <ErrorBoundary>
+      <NewsServiceProvider value={newsService}>
+        <Router basename="/">
+          <App />
+        </Router>
+      </NewsServiceProvider>
+    </ErrorBoundary>
+  </Provider>,
   document.getElementById('root')
 );
