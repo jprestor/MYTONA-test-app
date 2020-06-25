@@ -10,7 +10,7 @@ const PageHeader = () => {
         <ul className="nav">
           <li className="nav-item">
             <Link className="navbar-brand  nav-link" to="/">
-              MyTona-test
+              MyNews-test
             </Link>
           </li>
           <li className="nav-item">

@@ -8,7 +8,7 @@ import './main-page.scss';
 const MainPage = () => {
   return (
     <Fragment>
-      <h1 className="main-page-title">MYTONA test-app</h1>
+      <h1 className="main-page-title">MyNews test-app</h1>
 
       <div className="title-line">
         <h2>Последние новости</h2>
@@ -23,7 +23,7 @@ const MainPage = () => {
           <li className="list-group-item">
             Страницы:{' '}
             <i className="font-weight-normal">
-               Главная, Новости, Карточка новости, Страница авторизации
+              Главная, Новости, Карточка новости, Страница авторизации
             </i>
           </li>
           <li className="list-group-item">
@@ -35,7 +35,7 @@ const MainPage = () => {
             постраничная пагинация, с выводом шести записей на странице
           </li>
           <li className="list-group-item">
-          Все компоненты реализованы как компоненты-функции с применением{' '}
+            Все компоненты реализованы как компоненты-функции с применением{' '}
             <i className="font-weight-normal">Hooks</i>
           </li>
         </ul>
@@ -43,7 +43,7 @@ const MainPage = () => {
 
       <a
         className="main-page-btn  btn btn-lg btn-dark"
-        href="https://github.com/jprestor/MYTONA-test-app"
+        href="https://github.com/jprestor/mynews-test-app"
         target="_blank"
       >
         Исходный код на github

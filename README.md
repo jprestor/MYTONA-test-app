@@ -1,6 +1,4 @@
-### MYTONA test-app
-
-Тестовое задание на вакансию **frontend-developer (react)**, для компании **MYTONA**
+### MYNews test-app
 
 ##### Реализовано:
 
